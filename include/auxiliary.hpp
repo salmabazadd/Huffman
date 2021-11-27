@@ -4,6 +4,7 @@
 #include <iostream>
 #include <sstream>
 #include <fstream>
+#include <vector>
 
 inline std::ifstream::pos_type get_filesize(std::string& filename){
   std::ifstream in(filename, std::ifstream::ate);
@@ -15,7 +16,12 @@ inline std::ifstream::pos_type get_filesize(std::string& filename){
 }
 
 template<class T>
-void print(const std::vector<T>& v ) {
+/*void Print (const std::vector<int>& v){  //vector<int> v;  
+for (int i=0; i<v.size();i++){  
+    cout << v[i] << endl; 
+     }
+  }*/
+void print(const std::vector <const T>& v) {
   for(size_t i = 0; i < v.size(); ++i){
     std::cout << "[" << i << "] = " << v[i] << ",\t ";
   }
